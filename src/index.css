@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #030712;
+  --bg-card: #0f172a;
+  --text-main: #f3f4f6;
+  --text-muted: #9ca3af;
+  --accent-cyan: #06b6d4;
+  --accent-amber: #f59e0b;
+}
+
+.light-theme {
+  --bg-primary: #f8fafc;
+  --bg-card: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* Editorial Serif for Body Text */
+.prose-journal {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.125rem;
+  line-height: 1.85;
+}
+
+.prose-journal p {
+  margin-bottom: 1.5rem;
+}
+
+/* First Paragraph Drop Cap */
+.drop-cap::first-letter {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 3.5rem;
+  line-height: 1;
+  font-weight: 700;
+  float: left;
+  margin-right: 0.75rem;
+  margin-top: 0.1rem;
+  color: #06b6d4;
+}
+
+/* Glassmorphism Cards */
+.widget-card {
+  backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Math formatting tweaks */
+.block-math {
+  display: block;
+  margin: 1.25rem 0;
+  text-align: center;
+  font-size: 1.15rem;
+}
+
+.inline-math {
+  display: inline-block;
+  padding: 0 0.2rem;
+}
+
+/* Pull quote */
+.pull-quote {
+  border-left: 4px solid #06b6d4;
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  font-size: 1.25rem;
+  color: #e2e8f0;
+}
