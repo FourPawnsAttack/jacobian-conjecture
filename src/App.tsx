@@ -5,6 +5,7 @@ import { MathView } from './components/Math';
 import { OneDExplorer } from './components/OneDExplorer';
 import { TwoDGridMapper } from './components/TwoDGridMapper';
 import { CounterexampleExplorer } from './components/CounterexampleExplorer';
+import { AlpogeCounterexample } from './components/AlpogeCounterexample';
 import { DegreeReductionSandbox } from './components/DegreeReductionSandbox';
 import { ProofExplorer } from './components/ProofExplorer';
 import { CustomPolynomialSandbox } from './components/CustomPolynomialSandbox';
@@ -28,8 +29,8 @@ export function App() {
           {/* Article Header / Hero */}
           <header id="intro" className="space-y-6 pb-10 border-b border-slate-800/80">
             <div className="flex flex-wrap items-center gap-3">
-              <span className="px-3 py-1 rounded-full text-xs font-bold bg-cyan-950 text-cyan-300 border border-cyan-800 uppercase tracking-wider">
-                Algebraic Geometry & Topology
+              <span className="px-3 py-1 rounded-full text-xs font-bold bg-rose-600 text-white uppercase tracking-wider shadow-lg flex items-center gap-1">
+                <Sparkles className="w-3.5 h-3.5" /> Breakthrough Updated July 2026
               </span>
               <span className="text-xs text-slate-400 font-medium">
                 Published July 2026 • 15 min interactive read
@@ -38,13 +39,13 @@ export function App() {
 
             <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-white font-serif leading-tight">
               The Mysterious Jacobian Conjecture:
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-emerald-300 to-amber-300">
-                When Calculus 101 Fails in Higher Dimensions
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-amber-300 to-cyan-300">
+                From Keller's 1936 Problem to the 2026 AI Counterexample
               </span>
             </h1>
 
             <p className="text-lg md:text-xl text-slate-300 font-serif italic leading-relaxed">
-              If a polynomial function has a derivative that never vanishes, is it automatically 1-to-1 and globally invertible? In 1D calculus, the answer is trivially yes. But in 2D and beyond, this 1936 problem remains one of mathematics' most enticing unsolved mysteries.
+              If a polynomial function has a derivative that never vanishes, is it automatically 1-to-1 and globally invertible? In 1D calculus, the answer is trivially yes. For 90 years, mathematicians wondered if it holds in higher dimensions—until July 19, 2026, when an explicit 3D counterexample disproved it for <MathView math="n \ge 3" />!
             </p>
 
             <div className="flex items-center gap-4 pt-2 text-xs text-slate-400">
@@ -80,7 +81,7 @@ export function App() {
             </div>
 
             <p>
-              For polynomial mappings over complex numbers <MathView math="\mathbb{C}^n" />, Ott-Heinrich Keller conjectured in 1936 that the answer is <strong>YES</strong>. Yet, nearly a century later, nobody has been able to prove it for any dimension <MathView math="n \ge 2" />!
+              For polynomial mappings over complex numbers <MathView math="\mathbb{C}^n" />, Ott-Heinrich Keller conjectured in 1936 that the answer is <strong>YES</strong>. For 90 years, mathematicians worked tirelessly to prove it—until July 2026!
             </p>
           </section>
 
@@ -172,14 +173,28 @@ export function App() {
             </div>
           </section>
 
-          {/* Section 5: The Pitfalls & Counterexamples */}
-          <section id="pitfalls" className="prose-journal text-slate-300">
+          {/* Section 5: The 2026 Alpöge 3D Counterexample (NEW!) */}
+          <section id="alpoge" className="prose-journal text-slate-300">
             <h2 className="text-2xl md:text-3xl font-bold text-white font-serif mb-4 flex items-center gap-3">
-              <span className="text-cyan-400 font-mono text-xl">5.</span> The Traps: Real & Transcendental Pitfalls
+              <span className="text-rose-400 font-mono text-xl">5.</span> The 2026 Alpöge Counterexample (<MathView math="\mathbb{C}^3" />)
             </h2>
 
             <p>
-              Why has this problem stumped mathematicians for 90 years? Because if you change any single hypothesis even slightly, the conjecture becomes <strong>FALSE</strong>!
+              For nearly 90 years, mathematicians suspected the conjecture held in all dimensions. However, on <strong>July 19, 2026</strong>, Levent Alpöge presented an explicit counterexample in 3D space, discovered with assistance from the <em>Claude Fable 5</em> AI model!
+            </p>
+
+            {/* Alpöge Interactive Widget */}
+            <AlpogeCounterexample />
+          </section>
+
+          {/* Section 6: The Pitfalls & Real Counterexamples */}
+          <section id="pitfalls" className="prose-journal text-slate-300">
+            <h2 className="text-2xl md:text-3xl font-bold text-white font-serif mb-4 flex items-center gap-3">
+              <span className="text-cyan-400 font-mono text-xl">6.</span> Real & Transcendental Traps
+            </h2>
+
+            <p>
+              Even before Alpöge's 2026 breakthrough over <MathView math="\mathbb{C}^3" />, mathematicians had discovered that dropping any single hypothesis creates immediate counterexamples!
             </p>
 
             <p>
@@ -194,10 +209,10 @@ export function App() {
             <CounterexampleExplorer />
           </section>
 
-          {/* Section 6: Degree Reduction */}
+          {/* Section 7: Degree Reduction */}
           <section id="reductions" className="prose-journal text-slate-300">
             <h2 className="text-2xl md:text-3xl font-bold text-white font-serif mb-4 flex items-center gap-3">
-              <span className="text-cyan-400 font-mono text-xl">6.</span> Degree Reduction & Nilpotent Maps
+              <span className="text-cyan-400 font-mono text-xl">7.</span> Degree Reduction & Nilpotent Maps
             </h2>
 
             <p>
@@ -220,10 +235,10 @@ export function App() {
             <DegreeReductionSandbox />
           </section>
 
-          {/* Section 7: Step by Step Proof Explorer */}
+          {/* Section 8: Step by Step Proof Explorer */}
           <section id="proofs" className="prose-journal text-slate-300">
             <h2 className="text-2xl md:text-3xl font-bold text-white font-serif mb-4 flex items-center gap-3">
-              <span className="text-cyan-400 font-mono text-xl">7.</span> Step-by-Step Proof & Reduction Explorer
+              <span className="text-cyan-400 font-mono text-xl">8.</span> Step-by-Step Proof & Reduction Explorer
             </h2>
 
             <p>
@@ -234,10 +249,10 @@ export function App() {
             <ProofExplorer />
           </section>
 
-          {/* Section 8: Custom Polynomial Determinant Sandbox */}
+          {/* Section 9: Custom Polynomial Determinant Sandbox */}
           <section id="sandbox" className="prose-journal text-slate-300">
             <h2 className="text-2xl md:text-3xl font-bold text-white font-serif mb-4 flex items-center gap-3">
-              <span className="text-cyan-400 font-mono text-xl">8.</span> Custom Determinant Sandbox
+              <span className="text-cyan-400 font-mono text-xl">9.</span> Custom Determinant Sandbox
             </h2>
 
             <p>
@@ -248,10 +263,10 @@ export function App() {
             <CustomPolynomialSandbox />
           </section>
 
-          {/* Section 9: Quiz */}
+          {/* Section 10: Quiz */}
           <section id="quiz" className="prose-journal text-slate-300">
             <h2 className="text-2xl md:text-3xl font-bold text-white font-serif mb-4 flex items-center gap-3">
-              <span className="text-cyan-400 font-mono text-xl">9.</span> Test Your Intuition
+              <span className="text-cyan-400 font-mono text-xl">10.</span> Test Your Intuition
             </h2>
 
             <p>
@@ -262,7 +277,7 @@ export function App() {
             <Quiz />
           </section>
 
-          {/* Section 10: References & Footer */}
+          {/* Section 11: References & Footer */}
           <Footer />
         </article>
       </main>

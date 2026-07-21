@@ -11,12 +11,13 @@ const TOC_ITEMS: TocItem[] = [
   { id: 'one-d', title: '2. The 1D Calculus Warm-Up' },
   { id: 'two-d', title: '3. Higher Dimensions & The Jacobian' },
   { id: 'conjecture', title: '4. Formal Statement of the Conjecture' },
-  { id: 'pitfalls', title: '5. The Traps: Real & Transcendental' },
-  { id: 'reductions', title: '6. Degree Reduction & Nilpotent Maps' },
-  { id: 'proofs', title: '7. Step-by-Step Proof Explorer' },
-  { id: 'sandbox', title: '8. Custom Determinant Sandbox' },
-  { id: 'quiz', title: '9. Test Your Intuition' },
-  { id: 'references', title: '10. Academic References' },
+  { id: 'alpoge', title: '5. The 2026 Alpöge Counterexample' },
+  { id: 'pitfalls', title: '6. Real & Transcendental Traps' },
+  { id: 'reductions', title: '7. Degree Reduction & Nilpotent Maps' },
+  { id: 'proofs', title: '8. Step-by-Step Proof Explorer' },
+  { id: 'sandbox', title: '9. Custom Determinant Sandbox' },
+  { id: 'quiz', title: '10. Test Your Intuition' },
+  { id: 'references', title: '11. Academic References' },
 ];
 
 export const Toc: React.FC = () => {

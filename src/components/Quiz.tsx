@@ -24,7 +24,7 @@ const QUIZ_QUESTIONS: Question[] = [
       'The function F must be linear.',
     ],
     correctIndex: 1,
-    explanation: 'The Inverse Function Theorem is a local result! It only guarantees that F is locally 1-to-1 in a small neighborhood around x0, but says nothing about global injectivity.',
+    explanation: 'The Inverse Function Theorem is a local result! It guarantees that F is locally 1-to-1 near x0, but says nothing about global injectivity.',
   },
   {
     id: 2,
@@ -41,6 +41,19 @@ const QUIZ_QUESTIONS: Question[] = [
   },
   {
     id: 3,
+    questionMath: '\\text{Alp\\ddot{o}ge Counterexample (July 2026)}',
+    questionText: 'In July 2026, Levent Alpöge presented an explicit counterexample over C^3 with constant determinant det J = -2. What are the points P1 and P2 that produce a collision F(P1) = F(P2)?',
+    options: [
+      'P1 = (0,0,-1/4) and P2 = (1, -3/2, 13/2), both mapping to (-1/4, 0, 0).',
+      'P1 = (0,0,0) and P2 = (1,1,1), both mapping to (0,0,0).',
+      'P1 = (1,0,0) and P2 = (-1,0,0), both mapping to (1,1,1).',
+      'P1 = (2,2,2) and P2 = (-2,-2,-2), both mapping to (0,0,0).',
+    ],
+    correctIndex: 0,
+    explanation: 'Alpöge proved F(0,0,-1/4) = (-1/4,0,0) and F(1,-3/2,13/2) = (-1/4,0,0), proving F is non-injective despite constant det J = -2!',
+  },
+  {
+    id: 4,
     questionMath: '\\det J_F(x,y) > 0 \\quad \\text{everywhere on } \\mathbb{R}^2',
     questionText: 'What did Sergey Pinchuk prove in 1994 regarding polynomial maps over the REAL numbers R^2?',
     options: [
@@ -53,7 +66,7 @@ const QUIZ_QUESTIONS: Question[] = [
     explanation: 'Pinchuk constructed a degree 25 real polynomial map on R^2 with det J > 0 everywhere that is NOT 1-to-1! Over R, polynomials can fold at infinity, whereas over C complex zeros prevent this.',
   },
   {
-    id: 4,
+    id: 5,
     questionMath: 'F(X) = X - H(X)',
     questionText: 'The Bass-Connell-Wright & Yagzhev reduction theorem states that to solve the Jacobian conjecture for ALL dimensions, it suffices to prove it for which special maps?',
     options: [
@@ -66,7 +79,7 @@ const QUIZ_QUESTIONS: Question[] = [
     explanation: 'Unbelievably, any high-degree polynomial map can be reduced to a cubic map with a nilpotent Jacobian matrix! If the conjecture holds for all cubic nilpotent maps, it holds universally.',
   },
   {
-    id: 5,
+    id: 6,
     questionMath: '\\text{Ax-Grothendieck Theorem}',
     questionText: 'Why does the Ax-Grothendieck Theorem dramatically simplify the Jacobian Conjecture over C^n?',
     options: [
